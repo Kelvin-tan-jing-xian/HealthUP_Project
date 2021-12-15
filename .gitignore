@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/HealthUP/.vs/HealthUP
+/HealthUP/bin/Debug/netcoreapp3.1
+/HealthUP/obj
