@@ -65,7 +65,6 @@
     <None Include="wwwroot\assets\img\we-do\we-do-4.svg" />
     <None Include="wwwroot\assets\js\.DS_Store" />
     <None Include="wwwroot\assets\js\bootstrap.bundle-5.0.0.alpha-min.js" />
-    <None Include="wwwroot\assets\js\main.js" />
     <None Include="wwwroot\assets\js\tiny-slider.js" />
     <None Include="wwwroot\assets\js\wow.min.js" />
   </ItemGroup>
