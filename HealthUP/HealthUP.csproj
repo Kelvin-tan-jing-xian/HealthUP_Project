@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\report.cshtml" />
+    <Content Remove="wwwroot\css\report.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\assets\.DS_Store" />
     <None Include="wwwroot\assets\css\.DS_Store" />
     <None Include="wwwroot\assets\css\animate.css" />
@@ -80,7 +85,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\doctor\" />
     <Folder Include="Pages\elderly\" />
   </ItemGroup>
 
