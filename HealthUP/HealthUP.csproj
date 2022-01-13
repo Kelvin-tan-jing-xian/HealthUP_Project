@@ -85,6 +85,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\doctor\" />
     <Folder Include="Pages\elderly\" />
   </ItemGroup>
 
