@@ -20,6 +20,10 @@ namespace HealthUP.Models
             optionsBuilder.UseSqlServer(connectionString);
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+        //public DbSet<Report> Reports { get; set; }
+
         //
+
     }
 }
