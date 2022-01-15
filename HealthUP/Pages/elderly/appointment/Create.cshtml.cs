@@ -36,7 +36,7 @@ namespace HealthUP.Pages.elderly.appointments
             {
                 if (_svc.AddAppointment(MyAppointment))
                 {
-                    return RedirectToPage("/elderly/appointments/ThankYou");
+                    return RedirectToPage("/elderly/appointment/ThankYou");
 
                 }
                 else

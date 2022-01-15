@@ -19,6 +19,9 @@ namespace HealthUP.Models
         [Required]
         public string AvailableTimeslot { get; set; }
         [Required]
+        public string PaymentMethod { get; set; }
+
+        [Required]
         public double ConsultationFee { get; set; }
 
     }

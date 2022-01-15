@@ -26,6 +26,29 @@ namespace HealthUP.Services
             _context.SaveChanges();
             return true;
         }
+        public List<Appointment> GetAllAppointments()
+        {
+            List<Appointment> AllAppointments = new List<Appointment>();
+            AllAppointments = _context.Appointments.ToList();
+            return AllAppointments;
+        }
+
+        public Appointment GetAppointmentById(String id)
+        {
+            //List<Employee> AllEmployees = new List<Employee>();
+
+            //Employee employee = null;
+            //foreach (Employee item in AllEmployees)
+            //{
+            //    if (item.Id == id)
+            //    {
+            //        employee = item;
+            //    }
+            //}
+            Appointment theAppointment = _context.Appointments.Where(e => e.Id == id).FirstOrDefault();
+            return theAppointment;
+        }
+
         private bool AppointmentExists(string id)
         {
             return _context.Appointments.Any(e => e.Id == id);
