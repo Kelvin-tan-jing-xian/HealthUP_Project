@@ -1,0 +1,22 @@
+﻿@page
+@model HealthUP.Pages.elderly.appointments.ThankYouModel
+@{
+    ViewData["Title"] = "Thank you page";
+}
+<h1>Successful Booking!</h1>
+<h2>Thank you for booking with us! Click next to manage your booking</h2>
+<form method="post">
+    <div class="col-sm-10">
+        @{ if (Model.allappointments != null)
+           {
+
+                @foreach (var item in Model.allappointments)
+                {
+
+                    <a asp-page="/elderly/appointment/Retrieve" asp-route-id="@item.Id">Next</a>
+                }
+           }
+        }
+    </div>
+</form>
+

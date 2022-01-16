@@ -10,6 +10,7 @@ namespace HealthUP.Models
     {
 
         [Required]
+        [Key]
         public string NRIC { get; set; }
 
         [Required, MaxLength(25)]
@@ -18,16 +19,13 @@ namespace HealthUP.Models
         public string Lname { get; set; }
         [Required, MaxLength(50)]
         public string Email { get; set; }
-        [Required, MaxLength(30)]
+        [Required]
         public string Password { get; set; }
 
         [Required]
         public string Gender { get; set; }
-        [Required]
-        public int PhoneNumber { get; set; }
-        [Required]
-        public string StreetAddress { get; set; }
-        [Required]
+        public string PhoneNum { get; set; }
+        public string Role { get; set; }
         public int PostalCode { get; set; }
         [Required]
         public string UnitNumber { get; set; }

@@ -8,42 +8,45 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace HealthUP.Pages
+namespace HealthUP.Pages.elderly.appointments
 {
-    public class RegisterModel : PageModel
+    public class CreateModel : PageModel
+
     {
-        private readonly ILogger<RegisterModel> _logger;
-        private UserService _svc;
-        public RegisterModel(ILogger<RegisterModel> logger, UserService service)
+        private readonly ILogger<CreateModel> _logger;
+        private AppointmentService _svc;
+        public CreateModel(ILogger<CreateModel> logger, AppointmentService service)
         {
             _logger = logger;
             _svc = service;
         }
 
         [BindProperty]
-        public User MyUser { get; set; }
+        public Appointment MyAppointment { get; set; }
         [BindProperty]
         public string MyMessage { get; set; }
 
         public void OnGet()
         {
+
         }
         public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                if (_svc.AddUser(MyUser))
+                if (_svc.AddAppointment(MyAppointment))
                 {
-                    return RedirectToPage("login");
+                    return RedirectToPage("/elderly/appointment/ThankYou");
+
                 }
                 else
                 {
-                    MyMessage = "User Id already exist!";
+                    MyMessage = "Appointment Id already exist!";
                     return Page();
                 }
+
             }
             return Page();
         }
-
     }
 }
