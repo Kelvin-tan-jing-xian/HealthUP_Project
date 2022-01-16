@@ -1,0 +1,24 @@
+﻿@page
+@model HealthUP.Pages.payment.confirmModel
+@{
+    ViewData["Title0"] = "Confirm";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/confirmpayment.css">
+
+</head>
+<body>
+    <div class="center">
+        <h3>Payment Complete</h3>
+        <img src="~/images/icons/checkmark.png" />
+        <div class="buton">
+            <br />
+            <input id="home" type="submit" value="Go to Home" class="login100-form-btn" asp-page="index" />
+            <br />
+            <input id="medicalreport" type="submit" value="View Medical Report" class="login100-form-btn" asp-page="viewreport" />
+        </div>
+
+
+    </div>
+</body>
+
