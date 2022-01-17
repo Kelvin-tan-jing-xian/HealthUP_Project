@@ -21,6 +21,7 @@ namespace HealthUP.Models
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Activity> Activity { get; set; }
         //public DbSet<Report> Reports { get; set; }
 
         //
