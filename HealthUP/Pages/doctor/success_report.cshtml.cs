@@ -4,11 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using HealthUP.Pages.payment;
 
-namespace HealthUP.Pages.payment
+namespace HealthUP.Pages.doctor
 {
-    public class billingModel : PageModel
+    public class success_reportModel : PageModel
     {
         public void OnGet()
         {
