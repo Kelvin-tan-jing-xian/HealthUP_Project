@@ -31,9 +31,8 @@ namespace HealthUP.Pages.elderly.appointment
             else
                 return RedirectToPage("Index");
         }
-        public IActionResult OnPost()
-        {
-            return RedirectToPage("Edit");
-        }
+        //public IActionResult OnPost()
+        //{
+        //}
     }
 }
