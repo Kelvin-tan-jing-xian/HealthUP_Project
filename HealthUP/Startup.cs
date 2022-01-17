@@ -1,4 +1,5 @@
 using HealthUP.Models;
+using HealthUP.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +26,10 @@ namespace HealthUP
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            //services.AddTransient<UserService>();
+            services.AddTransient<UserService>();
+            services.AddTransient<AppointmentService>();
+            //services.AddTransient<ActivityService>();
+            //
             services.AddDbContext<HealthUPDbContext>();
 
         }
@@ -58,3 +62,5 @@ namespace HealthUP
         }
     }
 }
+
+
