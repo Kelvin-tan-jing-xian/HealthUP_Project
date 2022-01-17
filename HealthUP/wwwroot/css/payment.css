@@ -39,6 +39,46 @@ body, html {
     font-family: Poppins-Regular, sans-serif;
 }
 
+table, th, td {
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+}
+table{
+border: 1px solid black;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    width: 275px;
+}
+table,tbody,th,td,tfoot,thead,tr{
+    box-sizing:border-box;
+}
+/* Create a two-column layout */
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.details {
+    text-align: left !important
+}
+
+form {
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
 /*---------------------------------------------*/
 a {
     font-family: Poppins-Regular;
@@ -202,14 +242,13 @@ iframe {
 
 .container-login100 {
     width: 100%;
-    min-height: 100vh;
+    justify-content: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     padding: 15px;
     background: #9053c7;
@@ -253,7 +292,7 @@ iframe {
     font-size: 24px;
     color: navajowhite;
     text-shadow: 2px 2px black;
-    font-weight:bold;
+    font-weight: bold;
     line-height: 1.2;
     text-align: center;
     width: 100%;
@@ -410,5 +449,3 @@ iframe {
         padding: 100px 15px 33px 15px;
     }
 }
-
-

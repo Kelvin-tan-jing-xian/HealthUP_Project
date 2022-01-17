@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\paymetn.css" />
     <Content Remove="wwwroot\css\report.cshtml" />
     <Content Remove="wwwroot\css\report.cshtml.cs" />
   </ItemGroup>
@@ -85,6 +86,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="mssql_query\" />
     <Folder Include="Pages\doctor\" />
   </ItemGroup>
 

@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HealthUP.Pages.payment
 {
-    public class receiptModel : PageModel
+    public class confirmModel : PageModel
     {
         public void OnGet()
         {
+
         }
     }
 }
