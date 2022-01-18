@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HealthUP.Pages.doctor
+namespace HealthUP.Pages.doctor.report
 {
-    public class success_reportModel : PageModel
+    public class successModel : PageModel
     {
         public void OnGet()
         {

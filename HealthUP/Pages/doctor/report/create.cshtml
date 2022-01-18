@@ -1,7 +1,8 @@
 ﻿@page
-@model HealthUP.Pages.doctor.medical_reportModel
+@model HealthUP.Pages.doctor.report.CreateModel
 @{
     ViewData["Title"] = "Medical Report";
+
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,7 @@
 <body>
 
     <div class="limiter">
+        <div> <label class="text-danger">@Model.MyMessage</label> </div>
         <div class="container-login100">
             <form runat="server" method="post">
                 <span class="login100-form-title">
@@ -20,19 +22,19 @@
                 <table>
                     <tr>
                         <td>Namwvwvcvcwcdce<br /></td>
-                        </tr>
+                    </tr>
                     <tr>
                         <td>NRIwevvwcewcwcC<<br /></td>
-                        </tr>
+                    </tr>
                     <tr>
                         <td>Emailvwccwc<br /></td>
-                        </tr>
+                    </tr>
                     <tr>
                         <td>Genderwvwcvww<br /></td>
-                        </tr>
+                    </tr>
                     <tr>
                         <td>Birthdewvecwate<br /></td>
-                        </tr>
+                    </tr>
                     <tr>
                         <td>Addrvwecqwess<br /></td>
                     </tr>
@@ -72,7 +74,7 @@
                     <tr>
                         <td>
                             <div class="container-login100-form-btn">
-                                <input id="home" type="submit" value="Create Report" class="login100-form-btn"/>
+                                <input id="home" type="submit" value="Create Report" class="login100-form-btn" />
 
                             </div>
                         </td>
