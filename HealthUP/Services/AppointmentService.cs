@@ -53,6 +53,32 @@ namespace HealthUP.Services
         {
             return _context.Appointments.Any(e => e.Id == id);
         }
+        public bool UpdateEmployee(Appointment theappointment)
+        {
+            bool updated = true;
+            _context.Attach(theappointment).State = EntityState.Modified;
+
+            try
+            {
+                _context.SaveChanges();
+                updated = true;
+
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!AppointmentExists(theappointment.Id))
+                {
+                    updated = false;
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return updated;
+
+
+        }
 
 
     }

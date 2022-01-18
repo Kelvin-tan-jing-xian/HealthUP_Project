@@ -9,11 +9,15 @@
     <div asp-validation-summary="All" class="text-danger"></div>
     <div> <label class="text-danger">@Model.MyMessage</label> </div>
 
+    <div>
+        <input type="hidden" asp-for="MyAppointment.Id" class="form-control" value="@Model.MyAppointment.Id" />
+    </div>
+
 
     <div>
         <label class="col-sm-2 col-form-label">Do you need to change your symptoms?</label>
         <select name="MyAppointment.Symptoms" class="form-control">
-            <option class="hidden" selected disabled>--Select your symptoms--</option>
+            <option value="@Model.MyAppointment.Symptoms">@Model.MyAppointment.Symptoms</option>
             <option value="Stomach Pain">Stomach Pain</option>
             <option value="Back Pain">Back Pain</option>
             <option value="Cough">Cough</option>
@@ -62,7 +66,7 @@
         <input id="edit" type="submit" value="Save" class="btn btn-primary" />
     </div>
     <div class="col-sm-10">
-        <a asp-page=""></a>
+        <a asp-page="/elderly/appointment/Retrieve">Cancel</a>
     </div>
 </form>
 @section Scripts {

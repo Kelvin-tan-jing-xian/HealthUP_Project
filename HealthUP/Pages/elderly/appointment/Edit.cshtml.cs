@@ -26,8 +26,34 @@ namespace HealthUP.Pages.elderly.appointment
         public string MyMessage { get; set; }
         //public DateTime AvailableDate { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet(string id)
         {
+            if (id != null)
+            {
+                MyAppointment = _svc.GetAppointmentById(id);
+
+                return Page();
+            }
+            else
+                return RedirectToPage("Index");
+
         }
+
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            if (_svc.UpdateEmployee(MyAppointment) == true)
+            {
+
+                return RedirectToPage("/elderly/appointment/Retrieve");
+            }
+            else
+                return BadRequest();
+        }
+
     }
 }

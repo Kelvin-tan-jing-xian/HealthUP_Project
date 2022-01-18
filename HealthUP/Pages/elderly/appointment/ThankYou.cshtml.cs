@@ -12,8 +12,6 @@ namespace HealthUP.Pages.elderly.appointments
 {
     public class ThankYouModel : PageModel
     {
-        [BindProperty]
-        public List<Appointment> allappointments { get; set; }
 
         private readonly ILogger<ThankYouModel> _logger;
         private AppointmentService _svc;
@@ -25,7 +23,6 @@ namespace HealthUP.Pages.elderly.appointments
 
         public void OnGet()
         {
-            allappointments = _svc.GetAllAppointments();
 
         }
         //public IActionResult OnPost()

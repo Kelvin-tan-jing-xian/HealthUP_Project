@@ -6,30 +6,30 @@ using HealthUP.Models;
 using HealthUP.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
 namespace HealthUP.Pages.elderly.appointment
 {
     public class RetrieveModel : PageModel
     {
         [BindProperty]
-        public Appointment MyAppointment { get; set; }
+        public List<Appointment> allappointments { get; set; }
+
+        private readonly ILogger<RetrieveModel> _logger;
 
 
         private readonly AppointmentService _svc;
-        public RetrieveModel(AppointmentService service)
+        public RetrieveModel(ILogger<RetrieveModel> logger, AppointmentService service)
         {
+            _logger = logger;
+
             _svc = service;
         }
 
-        public IActionResult OnGet(string id)
+        public void OnGet()
         {
-            if (id != null)
-            {
-                MyAppointment = _svc.GetAppointmentById(id);
-                return Page();
-            }
-            else
-                return RedirectToPage("Index");
+            allappointments = _svc.GetAllAppointments();
+
         }
         //public IActionResult OnPost()
         //{
