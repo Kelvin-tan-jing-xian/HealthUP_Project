@@ -48,7 +48,7 @@ namespace HealthUP.Pages.elderly.appointment
 
             if (_svc.UpdateEmployee(MyAppointment) == true)
             {
-
+                // save button is clicked
                 return RedirectToPage("/elderly/appointment/Retrieve");
             }
             else
