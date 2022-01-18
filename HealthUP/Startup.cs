@@ -28,6 +28,7 @@ namespace HealthUP
             services.AddRazorPages();
             services.AddTransient<UserService>();
             services.AddTransient<AppointmentService>();
+            services.AddTransient<BookingService>();
             //services.AddTransient<ActivityService>();
             //
             services.AddDbContext<HealthUPDbContext>();
