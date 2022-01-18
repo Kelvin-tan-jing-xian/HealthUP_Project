@@ -87,7 +87,6 @@
 
   <ItemGroup>
     <Folder Include="mssql_query\" />
-    <Folder Include="Pages\doctor\" />
   </ItemGroup>
 
 </Project>
