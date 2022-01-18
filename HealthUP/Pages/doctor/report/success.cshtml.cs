@@ -12,5 +12,14 @@ namespace HealthUP.Pages.doctor
         public void OnGet()
         {
         }
+        public void OnPost()
+        {
+            if(ModelState.IsValid)
+            {
+                 Response.Redirect("../index");
+
+            }
+             Page();
+        }
     }
 }

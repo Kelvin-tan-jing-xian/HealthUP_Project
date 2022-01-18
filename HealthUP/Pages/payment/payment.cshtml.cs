@@ -12,5 +12,13 @@ namespace HealthUP.Pages.payment
         public void OnGet()
         {
         }
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToPage("confirm");
+            }
+            return Page();
+        }
     }
 }

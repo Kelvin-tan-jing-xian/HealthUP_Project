@@ -12,5 +12,9 @@ namespace HealthUP.Pages.doctor
         public void OnGet()
         {
         }
+        public IActionResult OnPost()
+        {
+            return RedirectToPage("report/create");
+        }
     }
 }

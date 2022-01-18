@@ -14,10 +14,11 @@
         <br />
         <img src="~/images/icons/checkmark.png" />
         <div class="buton">
-            <br />
-            <input id="home" type="submit" value="Go to Home" class="login100-form-btn" asp-page="index" />
-            <br />
-            <input id="medicalreport" type="submit" value="View Medical Report" class="login100-form-btn" asp-page="viewreport" />
+            <form runat="server" method="post">
+                <br />
+                <input id="home" type="submit" value="Go to Home" class="login100-form-btn" runat="server" onserverclick="Home" />
+                <br />
+            </form>
         </div>
 
 

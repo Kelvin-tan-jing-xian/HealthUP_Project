@@ -13,5 +13,13 @@ namespace HealthUP.Pages.payment
         {
 
         }
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToPage("home");
+            }
+            return Page();
+        }
     }
 }

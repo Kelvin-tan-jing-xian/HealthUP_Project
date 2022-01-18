@@ -13,9 +13,15 @@ namespace HealthUP.Pages.doctor
         public void OnGet()
         {
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
+            if (ModelState.IsValid)
+            {
+                // Create session
+                return RedirectToPage("success");
 
+            }
+            return Page();
         }
 
     }
